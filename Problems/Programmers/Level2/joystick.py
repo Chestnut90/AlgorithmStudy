@@ -27,6 +27,21 @@
 # 출처
 #
 # ※ 공지 - 2019년 2월 28일 테스트케이스가 추가되었습니다.
+
+'''
+Breath first search.
+1 <= length of name <= 20
+depth => n - 1
+
+O(2^n)
+max length (20) -> 2^19 = 1024 * 512 => about 500,000
+
+if n <= 31
+max length (31) -> 2^30 = 1024 * 1024 * 1024 => about 1,000,000,000
+--> timeout.
+
+'''
+
 def dist(alphabet):
     from_a = ord(alphabet) - ord('A')
     if from_a < 14:
