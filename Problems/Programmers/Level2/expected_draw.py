@@ -29,7 +29,7 @@
 # 세 번째 라운드에서 1번과 2번으로 두 참가자가 붙게 되므로 3을 return 하면 됩니다.
 
 def solution(n, a, b):
-    answer = 0
+    answer = 1
     a -= 1
     b -= 1
     if a > b:
@@ -39,6 +39,19 @@ def solution(n, a, b):
         answer += 1
         a = a //2
         b = b //2
-    return answer
+    return answer - 1
 
-print(solution(8, 4, 7))
+def other_solution(n, a, b):
+    return ((a-1)^(b-1)).bit_length()
+
+def solution2(n, a, b):
+
+    a = a - 1
+    print(bin(a))
+    b = b - 1
+    print(bin(b))
+    res = a^b
+    print(bin(res))
+
+print(solution2(8, 4, 7))
+
